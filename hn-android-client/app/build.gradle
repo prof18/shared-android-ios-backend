@@ -44,10 +44,11 @@ dependencies {
     implementation "androidx.activity:activity-ktx:1.1.0"
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
 
-    implementation "com.prof18.hn.foundation:hn-foundation-android:1.0.0"
+
+    implementation "com.prof18.hn.foundation:hn-foundation-android:1.0.1"
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

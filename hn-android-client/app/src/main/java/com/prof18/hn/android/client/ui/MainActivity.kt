@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.prof18.hn.android.client.R
 import com.prof18.hn.android.client.adapter.NewsAdapter
 import com.prof18.hn.android.client.data.model.NewsState
+import kotlinx.serialization.ExperimentalSerializationApi
 
+@ExperimentalSerializationApi
 class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView

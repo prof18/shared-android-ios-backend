@@ -3,9 +3,9 @@ import java.text.SimpleDateFormat
 
 plugins {
     id("com.android.library")
-    kotlin("multiplatform") version "1.4.0"
-    id("kotlin-android-extensions")
+    kotlin("multiplatform") version "1.4.21"
     id("maven-publish")
+    kotlin("plugin.serialization") version "1.4.21"
 }
 
 repositories {
@@ -17,8 +17,8 @@ repositories {
 
 val libName = "HNFoundation"
 val libGroup = "com.prof18.hn.foundation"
-val libVersionName = "1.0.0"
-val libVersionCode = 10000
+val libVersionName = "1.0.1"
+val libVersionCode = 10001
 
 group = libGroup
 version = libVersionName
@@ -37,10 +37,10 @@ version = libVersionName
 //}
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(30)
     defaultConfig {
         minSdkVersion(23)
-        targetSdkVersion(29)
+        targetSdkVersion(30)
         versionCode = libVersionCode
         versionName = libVersionName
     }
@@ -76,6 +76,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("co.touchlab:stately-common:1.1.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
             }
         }
         val commonTest by getting {
